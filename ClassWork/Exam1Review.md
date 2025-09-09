@@ -26,3 +26,5 @@ How to find if maximum or minimum?  Check the sign of the derivative.  It is neg
 2. $\frac{108}{5}$
 
 3. $120e^{-\frac{x\ln{2}}{18}}+x$
+
+4. Minimize the sum of the squares error!
