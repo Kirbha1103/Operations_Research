@@ -25,4 +25,4 @@ How to find if maximum or minimum?  Check the sign of the derivative.  It is neg
 
 2. $\frac{108}{5}$
 
-3. $120e^{-\frac{\ln{2}x}{18}}+x$
+3. $120e^{-\frac{x\ln{2}}{18}}+x$
