@@ -1,0 +1,81 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "3567bbed-8c16-4874-8282-4865a095ef52",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "h at 1: 0.6931471805599453 \n",
+      "h at 0.1: 0.9531017980432493 \n",
+      "h at 0.001: 0.9995003330834232 \n",
+      "h at 0.002: 0.9990013313365289 \n",
+      "h at 0.0001: 0.9999500033329731 \n",
+      "h at 1e-10: 1.000000082690371 \n",
+      "limit of ln(1+h)/h 1\n",
+      "derivative of ln(x): 1/x\n",
+      "derivative at x=1: 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "import sympy as sy\n",
+    "\n",
+    "h_values=[1,0.1,0.001,0.002,0.0001,0.0000000001] #given list of h\n",
+    "#0.0000000001=1e-10\n",
+    "for h in h_values:\n",
+    "   val = math.log(1+h)/h\n",
+    "   print(f\"h at {h}: {val} \")\n",
+    "\n",
+    "#calculation using sympy\n",
+    "h= sy.symbols('h')\n",
+    "expression = sy.log(1+h)/h\n",
+    "\n",
+    "#computing limit as h->0\n",
+    "limit=sy.limit(expression,h,0)\n",
+    "\n",
+    "# calculating derivation of ln(x)\n",
+    "x= sy.symbols('x')\n",
+    "derivative = sy.diff(sy.log(x),x)\n",
+    "derivative_at_1 = derivative.subs(x,1)\n",
+    "print(\"limit of ln(1+h)/h\",limit)\n",
+    "print(\"derivative of ln(x):\",derivative)\n",
+    "print(\"derivative at x=1:\",derivative_at_1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8d9707a3-dd82-4a19-9fa4-cfceae39b0ba",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

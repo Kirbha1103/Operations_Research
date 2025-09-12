@@ -1,0 +1,156 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "1de81eb1-0dc5-4e80-8dd2-e1e9b735d0bb",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid non-printable character U+00A0 (1550938405.py, line 5)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  Cell \u001b[0;32mIn[1], line 5\u001b[0;36m\u001b[0m\n\u001b[0;31m    return 0.10 * income\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid non-printable character U+00A0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#U.S. uses a progressive tax system. Using the 2023 data provided below, write a function that will compute the total tax properly.\n",
+    "def compute_individual_tax(income):\n",
+    "    \"return tax owed by individual\"\n",
+    "    if income<=11000:\n",
+    "    return 0.10 * income\n",
+    "  elif income<=44725:\n",
+    "   return 1100+0.12*(income-11000)\n",
+    "  elif income<=95375:\n",
+    "   return 5147+0.22*(income-44725)\n",
+    "  elif income<=182100:\n",
+    "   return 16290+0.24*(income-95375)\n",
+    "  elif income<=231250:\n",
+    "   return 37104+0.32*(income-182100)\n",
+    "  elif income<=578125:\n",
+    "   return 52832 + 0.35 * (income - 231250)\n",
+    "  else:\n",
+    "   return 174238.25 + 0.37 * (income - 578125)\n",
+    "\n",
+    "income_list=[5000,20000,60000,110000,500000]\n",
+    "for income in income_list:\n",
+    "  print(f\"Income: ${income:} , tax owed:${compute_individual_tax(income)} \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "b01326fa-41e4-4dad-8079-b4470ffa3232",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Income: $5000 , tax owed:$500.0 \n",
+      "Income: $20000 , tax owed:$2180.0 \n",
+      "Income: $60000 , tax owed:$8507.5 \n",
+      "Income: $110000 , tax owed:$19800.0 \n",
+      "Income: $500000 , tax owed:$146894.5 \n"
+     ]
+    }
+   ],
+   "source": [
+    "#U.S. uses a progressive tax system. Using the 2023 data provided below, write a function that will compute the total tax properly.\n",
+    "def compute_individual_tax(income):\n",
+    "    \"return tax owed by individual\"\n",
+    "    if income <= 11000:\n",
+    "        return 0.10 * income\n",
+    "    elif income <= 44725:\n",
+    "        return 1100 + 0.12 * (income - 11000)\n",
+    "    elif income <= 95375:\n",
+    "        return 5147 + 0.22 * (income - 44725)\n",
+    "    elif income <= 182100:\n",
+    "        return 16290 + 0.24 * (income - 95375)\n",
+    "    elif income <= 231250:\n",
+    "        return 37104 + 0.32 * (income - 182100)\n",
+    "    elif income <= 578125:\n",
+    "        return 52832 + 0.35 * (income - 231250)\n",
+    "    else:\n",
+    "        return 174238.25 + 0.37 * (income - 578125)\n",
+    "\n",
+    "income_list = [5000, 20000, 60000, 110000, 500000]\n",
+    "for income in income_list:\n",
+    "    print(f\"Income: ${income:} , tax owed:${compute_individual_tax(income)} \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "d2b31502-fca5-4528-807c-2146eeaf83d4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Income: $5000 , tax owed:$500.0 \n",
+      "Income: $20000 , tax owed:$2180.0 \n",
+      "Income: $60000 , tax owed:$8507.5 \n",
+      "Income: $110000 , tax owed:$19800.0 \n",
+      "Income: $500000 , tax owed:$146894.5 \n"
+     ]
+    }
+   ],
+   "source": [
+    "#U.S. uses a progressive tax system. Using the 2023 data provided below, write a function that will compute the total tax properly.\n",
+    "def compute_individual_tax(income):\n",
+    "    \"return tax owed by individual\"\n",
+    "    if income <= 11000:\n",
+    "        return 0.10 * income\n",
+    "    elif income <= 44725:\n",
+    "        return 1100 + 0.12 * (income - 11000)\n",
+    "    elif income <= 95375:\n",
+    "        return 5147 + 0.22 * (income - 44725)\n",
+    "    elif income <= 182100:\n",
+    "        return 16290 + 0.24 * (income - 95375)\n",
+    "    elif income <= 231250:\n",
+    "        return 37104 + 0.32 * (income - 182100)\n",
+    "    elif income <= 578125:\n",
+    "        return 52832 + 0.35 * (income - 231250)\n",
+    "    else:\n",
+    "        return 174238.25 + 0.37 * (income - 578125)\n",
+    "\n",
+    "income_list = [5000, 20000, 60000, 110000, 500000]\n",
+    "for income in income_list:\n",
+    "    print(f\"Income: ${income:} , tax owed:${compute_individual_tax(income)} \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5cc9fbe5-ee12-4857-ad77-c95eff68cc47",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
